@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>How long do I have to work to ...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js"
+        integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+</head>
+
+<body class="container">
+
+
+    <form class="">
+        <div class="input-group mb-3">
+            <input type="number" id="hoursWorked" class="form-control form-control-lg"
+                aria-label="Hours used for work a day" aria-describedby="basic-addon2"
+                placeholder="Hours used for work a day">
+            <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">Hours per day</span>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <select id="salarytype" class="form-control form-control-lg">
+                <option value="">Please select...</option>
+                <option value="weekly">Weekly</option>
+                <option value="fourweekly">4 weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+            <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">Salary interval</span>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <input type="number" id="salary" class="form-control form-control-lg" aria-label="Salary amount"
+                aria-describedby="basic-addon2" placeholder="Salary amount">
+            <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">Salary</span>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <input type="number" id="spend" class="form-control form-control-lg" aria-label="You want to spend ..."
+                aria-describedby="basic-addon2" placeholder="You want to spend ...">
+            <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">How much?!?</span>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary  btn-block" onclick="Calculate()">Calculate</button>
+    </form>
+
+
+    <div class="card" id="result" style="display:none">
+        <img src="mikhail-vasilyev-253977-unsplash-s.jpg" class="card-img-top" alt="Meow!!! How much??!?!">
+        <div class="card-body">
+            <h5 class="card-title">How much?!?!</h5>
+            <p class="card-text">
+                <div class="alert alert-info">You currently earn <span class="per-hour"></span> per hour (or <span class="per-min"></span> per min) </div>
+
+                <div class="alert alert-danger">You would need to work <span class="need-per-hour font-weight-bold"></span> hour(s) (or <span class="need-per-min font-italic"></span> min(s)) (or <span class="need-per-day"></span> day(s)) in order to spend <span class="spendvalue"></span>.</div>
+                
+                Are you sure your spend <span class="spendvalue"></span> is worth the time you worked?<br><br>
+                <button onclick="Redo();" class="btn btn-block btn-secondary">Change spend amount</button>
+            </p>
+
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+    </div>
+
+</body>
+
+</html>

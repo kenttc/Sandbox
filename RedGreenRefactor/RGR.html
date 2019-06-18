@@ -1,0 +1,31 @@
+<html>
+<script>
+function SetColour(colour, text){
+    document.body.style.backgroundColor = colour;
+    document.getElementById('Process').innerText = text;
+}
+</script>
+<style>
+.centered {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+}
+.big-words {
+ font-size:60px;
+}
+
+</style>
+<body>
+<div class="centered big-words">
+            <a  onclick="SetColour('red', 'Write enough to fail test')">Red</a>
+            <a onclick="SetColour('green', 'Write enough production code to pass test')">Green</a>
+            <a onclick="SetColour('blue', 'Time to refactor?')">Refactor</a>
+			</div>
+<div id="Process" class="big-words">
+
+</div>
+    </body>
+
+
+</html>
